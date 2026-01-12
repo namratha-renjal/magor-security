@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getImagePath } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -7,23 +8,33 @@ const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
+        <div
+          className="container relative z-10 rounded-lg"
+          style={{
+            backgroundImage: `url(${getImagePath("/images/hero/hero-bg.jpg")})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* Background overlay for text readability */}
+          <div className="absolute inset-0 z-0 rounded-lg bg-black/60 dark:bg-black/60"></div>
+          <div className="relative z-10 -mx-4 flex flex-wrap py-12 md:py-16 lg:py-20">
             <div className="w-full px-4">
               <div
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Your Shield in Uncertain Times – Secure, Reliable, Global Protection
                 </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p className="mb-12 text-base !leading-relaxed text-body-color-dark sm:text-lg md:text-xl">
                   Welcome to <b>Magor Security</b>, your trusted partner in providing comprehensive security services tailored to challenging and 
                   high-risk environments. We specialize in close protection escorts for individuals, particularly non-governmental organizations(NGOs), 
                   operating in dangerous zones affected by military or political conflicts. Our mission is to facilitate safe operations, streamline 
                   administrative processes in host countries, and support humanitarian efforts to aid local populations through NGO initiatives.
                 </p>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p className="mb-12 text-base !leading-relaxed text-body-color-dark sm:text-lg md:text-xl">
                   In addition, we offer expert advisory services to companies and associations on safeguarding assets and personnel, including 
                   advanced CCTV systems, alarm installations, close protection details, and robust anti-cybercrime strategies.
                 </p>
@@ -31,7 +42,7 @@ const Hero = () => {
                   <Link
                     target="_blank"
                     href="https://github.com/themewagon/startup-nextjs"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    className="inline-block rounded-sm bg-white/10 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-white/5"
                   >
                     Get a Free Consultation Today!
                   </Link>
