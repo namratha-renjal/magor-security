@@ -27,13 +27,13 @@ const ContactBox = () => {
         Phone
         </h4>
         <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
-          +1 (123) 456-7890 (International) | Local numbers for key regions
+          +33 75-130-4096
         </p>
         <h4 className="mb-4 mt-4 text-xl font-bold text-center text-black dark:text-white">
         Address
         </h4>
         <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
-          Your Company Address, e.g., 123 Security Lane, Global City, France/International HQ
+          71-75 shelton Street, Covent Garden, London, WC2H 9JQ
         </p>
       </div>
 
