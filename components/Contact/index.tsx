@@ -70,10 +70,9 @@ const Contact = () => {
         serviceId,
         templateId,
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@magorsecurity.com",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
         },
         publicKey
       );
