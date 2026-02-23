@@ -31,3 +31,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+EMAILJS_SETUP.md
+CLOUDFLARE_DEPLOY.md

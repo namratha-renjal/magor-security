@@ -12,6 +12,7 @@
     "deploy": "npm run build:prod && touch dist/.nojekyll"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "next": "^16.1.0",

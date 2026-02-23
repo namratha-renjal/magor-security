@@ -92,12 +92,50 @@ After deployment, you can add a custom domain:
 
 ---
 
-## Environment Variables (if needed)
+## Environment Variables - EmailJS Configuration
 
-If you need environment variables:
-1. Go to your project settings in Cloudflare Pages
-2. Navigate to **Environment variables**
-3. Add your variables (they're available during build time)
+To enable the contact form email functionality, you need to set up EmailJS environment variables in Cloudflare Pages:
+
+### Steps to Add Environment Variables:
+
+1. **Go to your Cloudflare Pages project:**
+   - Navigate to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+   - Go to **Pages** → Select your project
+
+2. **Open Settings:**
+   - Click on **Settings** in the top navigation
+   - Scroll down to **Environment variables** section
+
+3. **Add Production Environment Variables:**
+   Click **Add variable** and add each of the following:
+   
+   - **Variable name:** `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
+     **Value:** Your EmailJS Service ID
+   
+   - **Variable name:** `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
+     **Value:** Your EmailJS Template ID
+   
+   - **Variable name:** `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
+     **Value:** Your EmailJS Public Key
+   
+   - **Variable name:** `NEXT_PUBLIC_CONTACT_EMAIL` (optional)
+     **Value:** `info@magorsecurity.com` (or your preferred email)
+
+4. **Set Environment:**
+   - Make sure to select **Production** environment for each variable
+   - You can also add them for **Preview** if you want to test in preview deployments
+
+5. **Redeploy:**
+   - After adding the variables, trigger a new deployment
+   - Go to **Deployments** tab
+   - Click **Retry deployment** on the latest deployment, or push a new commit to trigger automatic deployment
+
+### Important Notes:
+
+- These variables are embedded into your build at build time (since they start with `NEXT_PUBLIC_`)
+- They will be visible in the client-side code, which is safe for EmailJS public keys
+- Make sure your EmailJS service is properly configured and active
+- Test the contact form after deployment to ensure emails are being sent correctly
 
 ---
 
